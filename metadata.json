@@ -1,0 +1,6 @@
+{
+  "name": "Harbour Handyman - Coffs Harbour Handyman Services",
+  "description": "Premium website for Harbour Handyman serving Coffs Harbour and surrounding 30km areas with multi-step quote wizard, senior accessibility controls, service showcase, before/after gallery, and suburb distance checker.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
