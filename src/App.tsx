@@ -12,7 +12,7 @@ import { FloatingCtaBar } from './components/FloatingCtaBar';
 import { QuoteWizardModal } from './components/QuoteWizardModal';
 import { ShieldCheck, Phone, CheckCircle2, MapPin, Wrench } from 'lucide-react';
 import { QuoteFormData } from './types';
-import section2Bg from './assets/images/section2.png';
+import section2Bg from './assets/images/section.png';
 
 export default function App() {
   const [quoteModalOpen, setQuoteModalOpen] = useState<boolean>(false);
