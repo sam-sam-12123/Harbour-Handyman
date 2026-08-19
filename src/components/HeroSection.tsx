@@ -44,7 +44,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuote }) => {
       }}
     >
       {/* Dark overlay over hero image */}
-      <div className="absolute inset-0 bg-slate-950/30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-slate-950/40 pointer-events-none"></div>
 
       {/* Subtle graphic */}
       <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#F58220_1px,transparent_1px)] [background-size:24px_24px]"></div>
