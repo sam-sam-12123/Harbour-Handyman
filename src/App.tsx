@@ -94,7 +94,7 @@ export default function App() {
         <section
           className="relative bg-cover bg-center bg-no-repeat text-white py-16 sm:py-20 border-t border-slate-800 overflow-hidden"
           style={{
-            backgroundImage: "url('assets/images/section2.png')"
+            backgroundImage: "url('/assets/images/section2.png')"
           }}
         >
           {/* Background Overlay */}
