@@ -12,8 +12,6 @@ import { FloatingCtaBar } from './components/FloatingCtaBar';
 import { QuoteWizardModal } from './components/QuoteWizardModal';
 import { ShieldCheck, Phone, CheckCircle2, MapPin, Wrench } from 'lucide-react';
 import { QuoteFormData } from './types';
-import heroBackground from '../assets/images/main1.png';
-
 
 export default function App() {
   const [quoteModalOpen, setQuoteModalOpen] = useState<boolean>(false);
@@ -28,7 +26,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 selection:bg-amber-400 selection:text-slate-950 font-sans">
-      
+
       {/* Navigation */}
       <Navbar
         onOpenQuote={handleOpenQuote}
@@ -48,14 +46,17 @@ export default function App() {
               <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0" />
               <span>$20M Public Liability Insurance</span>
             </div>
+
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-amber-400 shrink-0" />
               <span>10% Pensioner & Senior Discount</span>
             </div>
+
             <div className="flex items-center gap-2">
               <Wrench className="w-5 h-5 text-blue-300 shrink-0" />
               <span>NDIS Compliant Invoicing</span>
             </div>
+
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5 text-amber-400 shrink-0" />
               <span>Coffs Coast 30km ($0 Callout for Quotes)</span>
@@ -90,22 +91,39 @@ export default function App() {
         />
 
         {/* 9. Direct Call & Quote Action Banner before Footer */}
-        <section className="bg-gradient-to-r from-blue-950 via-slate-900 to-blue-950 text-white py-14 border-t border-slate-800">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6">
-            <div className="inline-flex items-center gap-2 bg-amber-500/20 text-amber-400 border border-amber-500/30 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
-              <MapPin className="w-4 h-4" /> Ready to get your job sorted?
+        <section
+          className="relative bg-cover bg-center bg-no-repeat text-white py-16 sm:py-20 border-t border-slate-800 overflow-hidden"
+          style={{
+            backgroundImage: "url('../assets/images/image.png')"
+          }}
+        >
+          {/* Background Overlay */}
+          <div className="absolute inset-0 bg-slate-950/65" />
+
+          {/* Subtle Blue Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-950/45 via-slate-950/20 to-blue-950/45" />
+
+          {/* Content */}
+          <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6">
+            <div className="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm text-amber-400 border border-amber-400/40 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+              <MapPin className="w-4 h-4" />
+              Ready to get your job sorted?
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black tracking-tight">
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white drop-shadow-lg">
               Get an Honest, Upfront Quote Across Coffs Harbour Today
             </h2>
-            <p className="text-slate-300 text-base max-w-2xl mx-auto">
-              Call Darren directly on <strong className="text-amber-400">0417 755 001</strong> for immediate assistance or submit your quote request online in seconds.
+
+            <p className="text-slate-100 text-base sm:text-lg max-w-2xl mx-auto drop-shadow-md">
+              Call Darren directly on{' '}
+              <strong className="text-amber-400">0417 755 001</strong>{' '}
+              for immediate assistance or submit your quote request online in seconds.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
               <a
                 href="tel:0417755001"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-black px-8 py-4 rounded-2xl text-lg shadow-xl shadow-amber-500/20 transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-4 rounded-2xl text-lg shadow-xl shadow-black/20 transition-all hover:-translate-y-0.5"
               >
                 <Phone className="w-5 h-5 text-slate-950 animate-pulse" />
                 <span>Call Darren: 0417 755 001</span>
@@ -113,7 +131,7 @@ export default function App() {
 
               <button
                 onClick={() => handleOpenQuote()}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-2xl text-base shadow-xl transition-all cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-2xl text-base shadow-xl shadow-black/20 transition-all hover:-translate-y-0.5 cursor-pointer"
               >
                 <span>Request Free Online Quote</span>
               </button>
