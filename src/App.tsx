@@ -12,13 +12,17 @@ import { FloatingCtaBar } from './components/FloatingCtaBar';
 import { QuoteWizardModal } from './components/QuoteWizardModal';
 import { ShieldCheck, Phone, CheckCircle2, MapPin, Wrench } from 'lucide-react';
 import { QuoteFormData } from './types';
+import section2Bg from './assets/images/section2.png';
 
 export default function App() {
   const [quoteModalOpen, setQuoteModalOpen] = useState<boolean>(false);
   const [quoteInitialService, setQuoteInitialService] = useState<string | undefined>(undefined);
   const [quoteInitialData, setQuoteInitialData] = useState<Partial<QuoteFormData> | undefined>(undefined);
 
-  const handleOpenQuote = (serviceTitle?: string, initialData?: Partial<QuoteFormData>) => {
+  const handleOpenQuote = (
+    serviceTitle?: string,
+    initialData?: Partial<QuoteFormData>
+  ) => {
     setQuoteInitialService(serviceTitle);
     setQuoteInitialData(initialData);
     setQuoteModalOpen(true);
@@ -34,6 +38,7 @@ export default function App() {
 
       {/* Main Content Sections */}
       <main>
+
         {/* 1. Hero Section */}
         <HeroSection
           onOpenQuote={handleOpenQuote}
@@ -42,6 +47,7 @@ export default function App() {
         {/* 2. Quick Trust Bar */}
         <section className="bg-blue-900 text-white py-4 border-y border-blue-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-around gap-4 text-xs sm:text-sm font-bold">
+
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0" />
               <span>$20M Public Liability Insurance</span>
@@ -61,6 +67,7 @@ export default function App() {
               <MapPin className="w-5 h-5 text-amber-400 shrink-0" />
               <span>Coffs Coast 30km ($0 Callout for Quotes)</span>
             </div>
+
           </div>
         </section>
 
@@ -94,20 +101,22 @@ export default function App() {
         <section
           className="relative bg-cover bg-center bg-no-repeat text-white py-16 sm:py-20 border-t border-slate-800 overflow-hidden"
           style={{
-            backgroundImage: "url('assets/images/section2.png')"
+            backgroundImage: `url(${section2Bg})`
           }}
         >
-          {/* Background Overlay */}
-          <div className="absolute inset-0 bg-slate-950/65" />
 
-          {/* Subtle Blue Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-950/45 via-slate-950/20 to-blue-950/45" />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-slate-950/55" />
 
-          {/* Content */}
+          {/* Soft Blue Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-950/35 via-slate-950/10 to-blue-950/35" />
+
+          {/* Section Content */}
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6">
+
             <div className="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm text-amber-400 border border-amber-400/40 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
               <MapPin className="w-4 h-4" />
-              Ready to get your job sorted?
+              <span>Ready to get your job sorted?</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white drop-shadow-lg">
@@ -116,14 +125,17 @@ export default function App() {
 
             <p className="text-slate-100 text-base sm:text-lg max-w-2xl mx-auto drop-shadow-md">
               Call Darren directly on{' '}
-              <strong className="text-amber-400">0417 755 001</strong>{' '}
+              <strong className="text-amber-400">
+                0417 755 001
+              </strong>{' '}
               for immediate assistance or submit your quote request online in seconds.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+
               <a
                 href="tel:0417755001"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-4 rounded-2xl text-lg shadow-xl shadow-black/20 transition-all hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-4 rounded-2xl text-lg shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-0.5"
               >
                 <Phone className="w-5 h-5 text-slate-950 animate-pulse" />
                 <span>Call Darren: 0417 755 001</span>
@@ -131,13 +143,16 @@ export default function App() {
 
               <button
                 onClick={() => handleOpenQuote()}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-2xl text-base shadow-xl shadow-black/20 transition-all hover:-translate-y-0.5 cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-2xl text-base shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
               >
                 <span>Request Free Online Quote</span>
               </button>
+
             </div>
+
           </div>
         </section>
+
       </main>
 
       {/* Footer */}
