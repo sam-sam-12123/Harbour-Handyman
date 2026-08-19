@@ -12,6 +12,8 @@ import { FloatingCtaBar } from './components/FloatingCtaBar';
 import { QuoteWizardModal } from './components/QuoteWizardModal';
 import { ShieldCheck, Phone, CheckCircle2, MapPin, Wrench } from 'lucide-react';
 import { QuoteFormData } from './types';
+import heroBackground from '../assets/images/main1.png';
+
 
 export default function App() {
   const [quoteModalOpen, setQuoteModalOpen] = useState<boolean>(false);
