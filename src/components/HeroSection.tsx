@@ -47,7 +47,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenQuote }) => {
       <div className="absolute inset-0 bg-slate-950/80 pointer-events-none"></div>
 
       {/* Subtle graphic */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#F58220_1px,transparent_1px)] [background-size:24px_24px]"></div>
+      <div className="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#F58220_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
