@@ -10,7 +10,7 @@ import {
   Sparkles
 } from 'lucide-react';
 
-import heroBackground from '../assets/images/main.png';
+import heroBackground from '../assets/images/main1.png';
 
 interface HeroSectionProps {
   onOpenQuote: (service?: string, initialData?: any) => void;
