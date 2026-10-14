@@ -119,9 +119,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuote }) => {
 
         {/* Bottom Credits & Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <div>
-            &copy; {new Date().getFullYear()} Harbour Handyman. All Rights Reserved. Built for Coffs Coast locals.
-          </div>
+          
+<div>
+  &copy; All Rights Reserved {new Date().getFullYear()} Designed And Developed By{" "}
+  <a
+    href="https://www.virtualbay.com.au/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Virtual Bay
+  </a>
+</div>
+
 
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1 text-slate-400">
